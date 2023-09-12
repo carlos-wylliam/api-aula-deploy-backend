@@ -1,5 +1,5 @@
 const knex = require('knex')({
-    client: 'mysql',
+    client: 'pg',
     connection: {
       host : process.env.DB_HOST,
       port : process.env.DB_PORT,
@@ -9,3 +9,5 @@ const knex = require('knex')({
     },
     ssl: {rejectUnauthorized: false}
   })
+
+module.exports = knex
