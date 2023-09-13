@@ -11,9 +11,7 @@ app.use(express.json())
 
 app.get('/', async ( req, res )=>{
     try {
-        const carros = await knex('carros')
-        console.log(carros)
-        return res.json(carros)
+        return res.json('teste')
     } catch (error) {
         console.log(error.message)
         return res.status(500).json({mensagem: "Erro interno no servidor"})
