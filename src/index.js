@@ -12,6 +12,7 @@ app.use(express.json())
 app.get('/', async ( req, res )=>{
     try {
         const carros = await knex('carros')
+        console.log(carros)
         return res.json(carros)
     } catch (error) {
         console.log(error.message)
